@@ -43,12 +43,12 @@ public class Sphere extends Shape implements Renderer {
 		return (float) (( 4.0 / 3.0 ) * Math.PI * Math.pow( getRadius(), 3));
 	}
 
-	public void render() {
+	public int render() {
 		// Show dialog box with a title Sphere.
 		//The box contains the dimensions, surface area, and volume for the Sphere's object if the render method called. 
 		//JOptionPane.showMessageDialog(null, "Volume = " + volume() + "\n" + "Surface Area = " + surfaceArea() + "\n"+ "Dimensions: \n Radius: " + getRadius() , "Sphere", JOptionPane.INFORMATION_MESSAGE);
 		String message = "Volume = " + volume() + "\n" + "Surface Area = " + surfaceArea() + "\n"+ "Dimensions: \n Radius: " + getRadius();
-		this.dialog.Show(message, "Sphere");
+		return this.dialog.Show(message, "Sphere");
 	}
 	
 	//When the object is created, Java calls the constructor first.

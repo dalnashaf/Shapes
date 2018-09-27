@@ -55,12 +55,12 @@ public class Cylinder extends Shape implements Renderer {
 		// Cylinder's volume = πr2h	
 		return (float) (Math.PI * Math.pow(getRadius(), 2) * getHeight());
 	}
-	public void render() {
+	public int render() {
 		// Show dialog box with a title Cylinder.
 		// The box contains the dimensions, surface area, and volume for the Cylinder's object if the render method called.
 		//JOptionPane.showMessageDialog(null, "Volume = " + volume() + "\n" + "Surface Area = " + surfaceArea() + "\n" + "Dimensions: \n Radius: " + getRadius() + "\n Height: " + getHeight(), "Cylinder", JOptionPane.INFORMATION_MESSAGE);		
 		String message = "Volume = " + volume() + "\n" + "Surface Area = " + surfaceArea() + "\n" + "Dimensions: \n Radius: " + getRadius() + "\n Height: " + getHeight();
-		this.dialog.Show(message, "Cylinder");
+		return this.dialog.Show(message, "Cylinder");
 	}
 	
 	//When the object is created, Java calls the constructor first.

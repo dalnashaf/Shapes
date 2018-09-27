@@ -73,12 +73,12 @@ public class Cuboid extends Shape implements Renderer {
 		return getDepth() * getWidth() * getHeight(); 
 	}
 	
-	public void render() {
+	public int render() {
 		// Show dialog box with a title Cuboid. 
 		//This box contains the dimensions, surface area, and volume for the Cuboid's object if the render method called. 
 		//JOptionPane.showMessageDialog(null, "Volume = " + volume() + "\n" + "Surface Area = " + surfaceArea() + "\n" + "Dimensions: \n Depth: " + getDepth() + "\n Height: " + getHeight() + "\n Width: " + getWidth(), "Cuboid", JOptionPane.INFORMATION_MESSAGE);					
 		String message = "Volume = " + volume() + "\n" + "Surface Area = " + surfaceArea() + "\n" + "Dimensions: \n Depth: " + getDepth() + "\n Height: " + getHeight() + "\n Width: " + getWidth();
-		this.dialog.Show(message, "Cylinder");
+	 return	this.dialog.Show(message, "Cylinder");
 	}
 	
 	//When the object is created, Java calls the constructor first.
